@@ -7,6 +7,7 @@ const selected_date_element = document.querySelector('.date-picker .selected-dat
 
 function toggleDatePicker(e) {
     dates_element.classList.toggle('active');
+    populateDates();
 }
 selected_date_element.addEventListener('click',toggleDatePicker);
 
