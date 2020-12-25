@@ -59,6 +59,7 @@ h1 {
 
 .date-picker .dates.active {
     display: block;
+    height: 340px;
 }
 
 .date-picker .dates .month {
@@ -93,11 +94,30 @@ h1 {
 }
 
 .date-picker .dates .days .day { 
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #313131;
+    position: relative;
+    display: flex;
+	/* justify-content: center;
+	align-items: center; */
+    color: #313131;
+    height: 60px;
+    width: 56px;
+    
 }
+
+
+.solar-day {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 20px;
+}
+.lunar-day {
+    position: absolute;
+    font-size: 9px;
+    top: 30px;
+    left: 30px;
+}
+
 .date-picker .dates .days .day.selected {
 	background-color: #00CA85;
 }
