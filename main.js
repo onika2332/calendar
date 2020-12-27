@@ -154,9 +154,12 @@ function populateDates(e) {
         lunar_day = document.createElement('div');
         lunar_day.classList.add('lunar-day');
         day_element.appendChild(lunar_day);
-        console.log( selectedYear  + '/' + (selectedMonth + 1));
+	
         let lunar_day_obj = convertSolar2Lunar(i + 1, month + 1, year, 7.0);
-        lunar_day.textContent = lunar_day_obj.getDate() + '/' + (1 + lunar_day_obj.getMonth());
+	if(lunar_day_obj.getDate() == 1)
+            lunar_day.textContent = lunar_day_obj.getDate() + '/' + (1 + lunar_day_obj.getMonth());
+        else 
+            lunar_day.textContent = lunar_day_obj.getDate();
 
     }
 }
